@@ -1,0 +1,29 @@
+
+@(pairs: Set[(TeamMember,TeamMember)])(implicit request: MessagesRequestHeader)
+
+  @main("Pair Generator") {
+
+    <h1>Pairs</h1>
+
+    @* Flash shows updates to a page *@
+    @request.flash.data.map{ case (name, value) =>
+      <div>@name: @value</div>
+    }
+
+    <table>
+      <thead>
+        <tr>
+          <th>Team Member 1</th>
+          <th>Team Member 2</th>
+        </tr>
+      </thead>
+      <tbody>
+      @for(member <- pairs) {
+        <tr><td>@member._1.name</td><td>@member._2.name</td></tr>
+      }
+      </tbody>
+    </table>
+
+    <hr/>
+
+  }

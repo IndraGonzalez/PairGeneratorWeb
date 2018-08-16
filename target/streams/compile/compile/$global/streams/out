@@ -1,0 +1,8 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/indralw/Desktop/play-scala-forms-example/app/controllers/PairGeneratorController.scala:45:29: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : scala.collection.immutable.Set[Nothing][0m
+[0m[[0m[31merror[0m] [0m[0m required: Set[(models.TeamMember, models.TeamMember)][0m
+[0m[[0m[31merror[0m] [0m[0mNote: Nothing <: (models.TeamMember, models.TeamMember), but trait Set is invariant in type A.[0m
+[0m[[0m[31merror[0m] [0m[0mYou may wish to investigate a wildcard type such as `_ <: (models.TeamMember, models.TeamMember)`. (SLS 3.2.10)[0m
+[0m[[0m[31merror[0m] [0m[0m    Ok(views.html.listPairs(teamPairs))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
