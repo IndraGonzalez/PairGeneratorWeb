@@ -1,5 +1,5 @@
 
-@(pairs: Set[(TeamMember,TeamMember)])(implicit request: MessagesRequestHeader)
+@(pairs: Seq[(TeamMember,TeamMember)])(implicit request: MessagesRequestHeader)
 
   @main("Pair Generator") {
 
@@ -25,5 +25,8 @@
     </table>
 
     <hr/>
+
+    <a href="@routes.PairGeneratorController.index">Go back</a>
+    <a href="@routes.PairGeneratorController.listPairs">Randomize</a>
 
   }

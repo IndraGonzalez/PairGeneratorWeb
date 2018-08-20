@@ -4,7 +4,7 @@
 		module="play-scala-forms-example_2.12"
 		revision="2.6.x"
 		status="integration"
-		publication="20180803162333"
+		publication="20180820120137"
 	>
 		<description>
 		play-scala-forms-example

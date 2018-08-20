@@ -15,10 +15,10 @@ import play.api.templates.PlayMagic._
 import play.api.mvc._
 import play.api.data._
 
-object listTeam extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template4[Set[TeamMember],Form[TeamMemberForm.Data],Call,MessagesRequestHeader,play.twirl.api.HtmlFormat.Appendable] {
+object listTeam extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template4[Seq[TeamMember],Form[TeamMemberForm.Data],Call,MessagesRequestHeader,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*2.2*/(members: Set[TeamMember], form: Form[TeamMemberForm.Data], postUrl: Call)(implicit request: MessagesRequestHeader):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*2.2*/(members: Seq[TeamMember], form: Form[TeamMemberForm.Data], postUrl: Call)(implicit request: MessagesRequestHeader):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
@@ -71,9 +71,9 @@ Seq[Any](format.raw/*3.1*/("""
     }
   }
 
-  def render(members:Set[TeamMember],form:Form[TeamMemberForm.Data],postUrl:Call,request:MessagesRequestHeader): play.twirl.api.HtmlFormat.Appendable = apply(members,form,postUrl)(request)
+  def render(members:Seq[TeamMember],form:Form[TeamMemberForm.Data],postUrl:Call,request:MessagesRequestHeader): play.twirl.api.HtmlFormat.Appendable = apply(members,form,postUrl)(request)
 
-  def f:((Set[TeamMember],Form[TeamMemberForm.Data],Call) => (MessagesRequestHeader) => play.twirl.api.HtmlFormat.Appendable) = (members,form,postUrl) => (request) => apply(members,form,postUrl)(request)
+  def f:((Seq[TeamMember],Form[TeamMemberForm.Data],Call) => (MessagesRequestHeader) => play.twirl.api.HtmlFormat.Appendable) = (members,form,postUrl) => (request) => apply(members,form,postUrl)(request)
 
   def ref: this.type = this
 
@@ -82,9 +82,9 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Aug 08 15:56:15 CEST 2018
-                  SOURCE: /Users/indralw/Desktop/play-scala-forms-example/app/views/listTeam.scala.html
-                  HASH: f0b6f3d21b054bb6e0d56c98a8f3084fccb46c02
+                  DATE: Mon Aug 20 14:24:05 CEST 2018
+                  SOURCE: /Users/indralw/Desktop/PairGeneratorWebApp/app/views/listTeam.scala.html
+                  HASH: 35f25c3c7fb6be205382813b7593df355ff9ddb9
                   MATRIX: 794->2|1003->118|1032->122|1062->144|1101->146|1133->152|1187->214|1218->220|1233->227|1256->242|1316->265|1350->272|1383->278|1408->282|1438->285|1464->290|1506->302|1539->308|1649->392|1687->414|1727->416|1763->425|1799->434|1814->440|1840->445|1888->463|1922->470|1986->507|2001->513|2052->543|2107->631|2139->637|2172->661|2212->663|2246->671|2259->675|2285->692|2345->714|2381->723|2425->740|2439->745|2464->749|2494->752|2508->757|2537->765|2573->774|2617->788|2653->794|2686->801|2701->807|2724->821|2764->823|2798->831|2813->837|2849->852|2884->861|2899->867|2944->891|2979->899|3047->937|3082->942
                   LINES: 21->2|26->3|27->4|27->4|27->4|29->6|31->8|32->9|32->9|32->9|32->9|33->10|33->10|33->10|33->10|33->10|34->11|36->13|41->18|41->18|41->18|42->19|42->19|42->19|42->19|43->20|44->21|47->24|47->24|47->24|51->28|52->29|52->29|52->29|53->30|53->30|53->30|53->30|54->31|55->32|55->32|55->32|55->32|55->32|55->32|56->33|57->34|58->35|60->37|60->37|60->37|60->37|61->38|61->38|61->38|63->40|63->40|63->40|65->42|66->43|68->45
                   -- GENERATED --

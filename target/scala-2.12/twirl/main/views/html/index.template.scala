@@ -24,7 +24,7 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 
 
 Seq[Any](format.raw/*2.1*/("""
-  """),_display_(/*3.4*/main("Welcome to Play")/*3.27*/ {_display_(Seq[Any](format.raw/*3.29*/("""
+  """),_display_(/*3.4*/main("Pair Generator")/*3.26*/ {_display_(Seq[Any](format.raw/*3.28*/("""
 
     """),format.raw/*5.5*/("""<h1>Pair Generator</h1>
 
@@ -34,7 +34,7 @@ Seq[Any](format.raw/*2.1*/("""
         <li>Generate pairs --> <a href=""""),_display_(/*10.42*/routes/*10.48*/.PairGeneratorController.listPairs),format.raw/*10.82*/("""">"""),_display_(/*10.85*/routes/*10.91*/.PairGeneratorController.listPairs),format.raw/*10.125*/("""</a></li>
       </ul>
     </div>
-    
+
   """)))}),format.raw/*14.4*/("""
 """))
       }
@@ -52,10 +52,10 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Aug 06 16:23:40 CEST 2018
-                  SOURCE: /Users/indralw/Desktop/play-scala-forms-example/app/views/index.scala.html
-                  HASH: 4716b5194bf0ce0c6457ff14ea5779a374157d5d
-                  MATRIX: 722->1|818->4|847->8|878->31|917->33|949->39|1064->128|1078->134|1131->167|1160->170|1174->176|1228->209|1306->260|1321->266|1376->300|1406->303|1421->309|1477->343|1548->384
+                  DATE: Mon Aug 20 12:01:44 CEST 2018
+                  SOURCE: /Users/indralw/Desktop/PairGeneratorWebApp/app/views/index.scala.html
+                  HASH: 6abd6139e50b73b9c0dfcbb6e26ff30dd731c58d
+                  MATRIX: 722->1|818->4|847->8|877->30|916->32|948->38|1063->127|1077->133|1130->166|1159->169|1173->175|1227->208|1305->259|1320->265|1375->299|1405->302|1420->308|1476->342|1543->379
                   LINES: 21->1|26->2|27->3|27->3|27->3|29->5|33->9|33->9|33->9|33->9|33->9|33->9|34->10|34->10|34->10|34->10|34->10|34->10|38->14
                   -- GENERATED --
               */

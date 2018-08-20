@@ -1,9 +1,7 @@
 package controllers
 
 import javax.inject.Inject
-import models.TeamMember
-import models.Team
-import models.PairGenerator
+import models._
 import play.api.data._
 import play.api.i18n._
 import play.api.mvc._
@@ -41,7 +39,6 @@ class PairGeneratorController @Inject()(cc: MessagesControllerComponents) extend
 
   def listPairs = Action { implicit request: MessagesRequest[AnyContent] =>
     val teamPairs = pairGenerator.getPairs
-    println(teamPairs)
     Ok(views.html.listPairs(teamPairs))
   }
 

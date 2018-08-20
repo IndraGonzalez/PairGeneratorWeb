@@ -15,10 +15,10 @@ import play.api.templates.PlayMagic._
 import play.api.mvc._
 import play.api.data._
 
-object listPairs extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[Set[scala.Tuple2[TeamMember, TeamMember]],MessagesRequestHeader,play.twirl.api.HtmlFormat.Appendable] {
+object listPairs extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[Seq[scala.Tuple2[TeamMember, TeamMember]],MessagesRequestHeader,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*2.2*/(pairs: Set[(TeamMember,TeamMember)])(implicit request: MessagesRequestHeader):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*2.2*/(pairs: Seq[(TeamMember,TeamMember)])(implicit request: MessagesRequestHeader):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
@@ -49,15 +49,18 @@ Seq[Any](format.raw/*3.1*/("""
 
     <hr/>
 
-  """)))}),format.raw/*29.4*/("""
+    <a href=""""),_display_(/*29.15*/routes/*29.21*/.PairGeneratorController.index),format.raw/*29.51*/("""">Go back</a>
+    <a href=""""),_display_(/*30.15*/routes/*30.21*/.PairGeneratorController.listPairs),format.raw/*30.55*/("""">Randomize</a>
+
+  """)))}),format.raw/*32.4*/("""
 """))
       }
     }
   }
 
-  def render(pairs:Set[scala.Tuple2[TeamMember, TeamMember]],request:MessagesRequestHeader): play.twirl.api.HtmlFormat.Appendable = apply(pairs)(request)
+  def render(pairs:Seq[scala.Tuple2[TeamMember, TeamMember]],request:MessagesRequestHeader): play.twirl.api.HtmlFormat.Appendable = apply(pairs)(request)
 
-  def f:((Set[scala.Tuple2[TeamMember, TeamMember]]) => (MessagesRequestHeader) => play.twirl.api.HtmlFormat.Appendable) = (pairs) => (request) => apply(pairs)(request)
+  def f:((Seq[scala.Tuple2[TeamMember, TeamMember]]) => (MessagesRequestHeader) => play.twirl.api.HtmlFormat.Appendable) = (pairs) => (request) => apply(pairs)(request)
 
   def ref: this.type = this
 
@@ -66,11 +69,11 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Aug 08 15:56:15 CEST 2018
-                  SOURCE: /Users/indralw/Desktop/play-scala-forms-example/app/views/listPairs.scala.html
-                  HASH: bf57d747f5109412ec9a0c713aaa6b597d9f6bdb
-                  MATRIX: 790->2|962->81|991->85|1021->107|1060->109|1092->115|1139->170|1170->176|1185->183|1208->198|1268->221|1302->228|1335->234|1360->238|1390->241|1416->246|1458->258|1491->264|1668->415|1704->435|1744->437|1780->446|1816->455|1831->461|1860->469|1897->479|1912->485|1941->493|1989->511|2023->518|2090->555
-                  LINES: 21->2|26->3|27->4|27->4|27->4|29->6|31->8|32->9|32->9|32->9|32->9|33->10|33->10|33->10|33->10|33->10|34->11|36->13|44->21|44->21|44->21|45->22|45->22|45->22|45->22|45->22|45->22|45->22|46->23|47->24|52->29
+                  DATE: Mon Aug 20 12:08:25 CEST 2018
+                  SOURCE: /Users/indralw/Desktop/PairGeneratorWebApp/app/views/listPairs.scala.html
+                  HASH: fb399cc27bc427798a5898237c13a2c6ff5abda1
+                  MATRIX: 790->2|962->81|991->85|1021->107|1060->109|1092->115|1139->170|1170->176|1185->183|1208->198|1268->221|1302->228|1335->234|1360->238|1390->241|1416->246|1458->258|1491->264|1668->415|1704->435|1744->437|1780->446|1816->455|1831->461|1860->469|1897->479|1912->485|1941->493|1989->511|2023->518|2098->566|2113->572|2164->602|2219->630|2234->636|2289->670|2339->690
+                  LINES: 21->2|26->3|27->4|27->4|27->4|29->6|31->8|32->9|32->9|32->9|32->9|33->10|33->10|33->10|33->10|33->10|34->11|36->13|44->21|44->21|44->21|45->22|45->22|45->22|45->22|45->22|45->22|45->22|46->23|47->24|52->29|52->29|52->29|53->30|53->30|53->30|55->32
                   -- GENERATED --
               */
           
